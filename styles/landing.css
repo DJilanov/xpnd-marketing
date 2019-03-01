@@ -6,6 +6,7 @@
 .landing img {
 	position: absolute;
 	right: 0;
+	max-width: 100%;
 }
 
 .right-side h1 {
