@@ -1,0 +1,329 @@
+@font-face {
+	font-family: FunkisBRegular;
+	src: url("../fonts/Funkis B Regular.otf");
+}
+
+@font-face {
+	font-family: FunkisBBold;
+	src: url("../fonts/Funkis B SemiBold.otf");
+}
+
+html * {
+	font-family: FunkisBRegular;
+}
+
+.main-row.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.main-row {
+	min-height: 100vh;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+label {
+	font-size: 18px;
+}
+
+.form-check-label {
+	font-size: 22px;
+}
+
+h1, h2, label {
+	font-family: FunkisBBold;
+}
+
+.spacer {
+	height: 30px;
+}
+
+.logo-image img {
+	margin-left: 20px;
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+.left-side {
+	padding-left: 15%;
+	padding-right: 10%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.left-side h4 {
+	margin-top: 20px;
+	letter-spacing: 7px;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #1A3FF0;
+	font-family: FunkisBBold;
+}
+
+.left-side .info {
+	margin-top: 40px;
+}
+
+.left-side p {
+	color: #6A6A6B;
+}
+
+.right-side {
+	background-color: #1A3FF0;
+	align-items: center;
+	display: flex;
+}
+
+.right-side form {
+	padding-left: 10%;
+	padding-right: 15%;
+	color: white;
+	width: 100%;
+}
+
+.btn-primary {
+	width: 100%;
+	background-color: white;
+	border: 1px solid white;
+	color: #1A3FF0;
+	height: 50px;
+}
+
+.form-check-label {
+	margin-bottom: 20px;
+}
+
+/* RADIO */
+.funkyradio div {
+	clear: both;
+	overflow: hidden;
+}
+
+.funkyradio label {
+	width: 100%;
+	font-weight: normal;
+}
+
+.funkyradio.inverted {
+	margin-top: 10px;
+}
+
+.funkyradio.inverted label {
+	font-size: 14px;
+	padding-right: 80px;
+	padding: 20px;
+	border: 2px solid #4463F3;
+	text-indent: 0 !important;
+}
+
+.funkyradio.inverted label div {
+	font-family: FunkisBBold;
+	width: 80%;
+}
+
+.funkyradio input[type="radio"]:empty,
+.funkyradio input[type="checkbox"]:empty {
+	display: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label,
+.funkyradio input[type="checkbox"]:empty ~ label {
+	position: relative;
+	line-height: 2em;
+	text-indent: 3.25em;
+	margin-top: 5px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label:before,
+.funkyradio input[type="checkbox"]:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2em;
+	height: 2em;
+	margin: auto;
+	background: #4463F3;
+	border-radius: 3px 0 0 3px;
+}
+
+.funkyradio.inverted input[type="radio"]:empty ~ label:before,
+.funkyradio.inverted input[type="checkbox"]:empty ~ label:before {
+	left: inherit;
+	right: 20px;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
+	color: white;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+	content: '\2714';
+	text-indent: .6em;
+	color: #1A3FF0;
+}
+
+.funkyradio input[type="radio"]:checked ~ label,
+.funkyradio input[type="checkbox"]:checked ~ label {
+	font-family: FunkisBBold;
+}
+
+.funkyradio input[type="radio"]:checked ~ label:before,
+.funkyradio input[type="checkbox"]:checked ~ label:before {
+	content: '\2714';
+	text-indent: .6em;
+	color: #1A3FF0;
+	background-color: white;
+}
+
+.funkyradio input[type="radio"]:focus ~ label:before,
+.funkyradio input[type="checkbox"]:focus ~ label:before {
+	box-shadow: 0 0 0 3px #999;
+}
+
+.funkyradio-primary input[type="radio"]:checked ~ label:before,
+.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+	color: #1A3FF0;
+	background-color: white;
+}
+
+/* form starting stylings ------------------------------- */
+.group {
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.group input {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: #1A3FF0;
+	color: white;
+}
+
+.group input:focus {
+	outline: none;
+}
+
+/* LABEL ======================================= */
+.group label {
+	color: white;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	top: 10px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.group input:focus ~ label, .group input:valid ~ label {
+	top: -20px;
+	font-size: 14px;
+}
+
+/* BOTTOM BARS ================================= */
+.group .bar {
+	position: relative;
+	display: block;
+	width: 100%;
+	color: #777;
+}
+
+.group .bar:before, .group .bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #5264AE;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+.group .bar:before {
+	left: 50%;
+}
+
+.group .bar:after {
+	right: 50%;
+}
+
+/* active state */
+.group input:focus ~ .bar:before, .group input:focus ~ .bar:after {
+	width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.group .highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+/* active state */
+.group input:focus ~ .highlight {
+	-webkit-animation: inputHighlighter 0.3s ease;
+	-moz-animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from {
+		background: #5264AE;
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@-moz-keyframes inputHighlighter {
+	from {
+		background: #5264AE;
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@keyframes inputHighlighter {
+	from {
+		background: #5264AE;
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
